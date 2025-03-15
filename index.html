@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Sudoku</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="home">
+        <header>
+            <h1> SUDOKU</h1>
+            <h2> MATA</h2>
+        </header>
+        <div>
+            <button class="button button-new" onclick="start()">
+                <span>
+                New game
+                </span>
+            </button>
+            <button class="button button-continue">
+                <span>
+                Continue
+                </span>
+            </button>
+        </div>
+    </div>
+    <div id="level">
+        <button id="return-home-level" class="button-home" onclick="returnhome()">
+            <img class="img-home" src="https://www.seekpng.com/png/detail/339-3392184_home-icons-blue-home-icon-blue-png.png">
+        </button>
+        <button class="button-level" onclick="gotoplay(50)">
+            <span>
+            Easy
+            <br>
+            Best Record:
+            </span>
+        </button>
+        <br>
+        <button class="button-level" onclick="gotoplay(40)">
+            <span>
+            Medium
+            <br>
+            Best Record:
+            </span>
+        </button>
+        <br>
+        <button class="button-level" onclick="gotoplay(30)">
+            <span>
+            Hard
+            <br>
+            Best Record:
+            </span>
+        </button>
+        <br>
+        <button class="button-level" onclick="goto6x6()">
+            <span>
+            6X6
+            <br>
+            Best Record:
+            </span>
+        </button>
+    </div>
+    <div id="play6x6">
+        <button id="return-home-play" class="button-home" onclick="returnhome()">
+            <img class="img-home" src="https://www.linkpicture.com/q/home_41.png">
+        </button>
+        <button id="submit6x6" class ="submit-button" onclick="submit_ans6x6()">
+            SUBMIT
+        </button>
+        <button class ="img-erase-button" onclick="erase()">
+            <img class="img=erase" src="https://static.thenounproject.com/png/61560-200.png";
+        </button>
+        <button id="btp1" class="button-play" onclick="thaygt(1)">
+        <div>1</div>
+        </button>
+        <br>
+        <button id="btp2" class="button-play" onclick="thaygt(2)">
+        <div>2</div>
+        </button>
+        <br>
+        <button id="btp3" class="button-play" onclick="thaygt(3)">
+        <div>3</div>
+        </button>
+        <br>
+        <button id="btp4" class="button-play" onclick="thaygt(4)">
+        <div>4</div>
+        </button>
+        <br>
+        <button id="btp5" class="button-play" onclick="thaygt(5)">
+        <div>5</div>
+        </button>
+        <br>
+        <button id="btp6" class="button-play" onclick="thaygt(6)">
+        <div>6</div>
+        </button>
+        <br>
+        </button>
+        <div class="container6x6">
+            <button id="i1^" class="item6 item_16" onclick="clicka(1)"></button>
+            <button id="i2^" class="item6 item_26" onclick="clicka(2)"></button>
+            <button id="i3^" class="item6 item_36" onclick="clicka(3)"></button>
+            <button id="i4^" class="item6 item_16" onclick="clicka(4)"></button>
+            <button id="i5^" class="item6 item_26" onclick="clicka(5)"></button>
+            <button id="i6^" class="item6 item_36" onclick="clicka(6)"></button>
+            <button id="i7^" class="item6 item_46" onclick="clicka(7)"></button>
+            <button id="i8^" class="item6 item_56" onclick="clicka(8)"></button>
+            <button id="i9^" class="item6 item_66" onclick="clicka(9)"></button>
+            <button id="i10^" class="item6 item_46" onclick="clicka(10)"></button>
+            <button id="i11^" class="item6 item_56" onclick="clicka(11)"></button>
+            <button id="i12^" class="item6 item_66" onclick="clicka(12)"></button>
+            <button id="i13^" class="item6 item_16" onclick="clicka(13)"></button>
+            <button id="i14^" class="item6 item_26" onclick="clicka(14)"></button>
+            <button id="i15^" class="item6 item_36" onclick="clicka(15)"></button>
+            <button id="i16^" class="item6 item_16" onclick="clicka(16)"></button>
+            <button id="i17^" class="item6 item_26" onclick="clicka(17)"></button>
+            <button id="i18^" class="item6 item_36" onclick="clicka(18)"></button>
+            <button id="i19^" class="item6 item_46" onclick="clicka(19)"></button>
+            <button id="i20^" class="item6 item_56" onclick="clicka(20)"></button>
+            <button id="i21^" class="item6 item_66" onclick="clicka(21)"></button>
+            <button id="i22^" class="item6 item_46" onclick="clicka(22)"></button>
+            <button id="i23^" class="item6 item_56" onclick="clicka(23)"></button>
+            <button id="i24^" class="item6 item_66" onclick="clicka(24)"></button>
+            <button id="i25^" class="item6 item_16" onclick="clicka(25)"></button>
+            <button id="i26^" class="item6 item_26" onclick="clicka(26)"></button>
+            <button id="i27^" class="item6 item_36" onclick="clicka(27)"></button>
+            <button id="i28^" class="item6 item_16" onclick="clicka(28)"></button>
+            <button id="i29^" class="item6 item_26" onclick="clicka(29)"></button>
+            <button id="i30^" class="item6 item_36" onclick="clicka(30)"></button>
+            <button id="i31^" class="item6 item_46" onclick="clicka(31)"></button>
+            <button id="i32^" class="item6 item_56" onclick="clicka(32)"></button>
+            <button id="i33^" class="item6 item_66" onclick="clicka(33)"></button>
+            <button id="i34^" class="item6 item_46" onclick="clicka(34)"></button>
+            <button id="i35^" class="item6 item_56" onclick="clicka(35)"></button>
+            <button id="i36^" class="item6 item_66" onclick="clicka(36)"></button>
+        </div>
+    </div>
+    <div id="play">
+        <button id="return-home-play" class="button-home" onclick="returnhome()">
+            <img class="img-home" src="https://www.linkpicture.com/q/home_41.png">
+        </button>
+        <button id="submit" class ="submit-button" onclick="submit_ans()">
+            SUBMIT
+        </button>
+        <button class ="img-erase-button" onclick="erase()">
+            <img class="img=erase" src="https://static.thenounproject.com/png/61560-200.png";
+        </button>
+        <button id="btp1" class="button-play" onclick="thaygt(1)">
+        <div>1</div>
+        </button>
+        <br>
+        <button id="btp2" class="button-play" onclick="thaygt(2)">
+        <div>2</div>
+        </button>
+        <br>
+        <button id="btp3" class="button-play" onclick="thaygt(3)">
+        <div>3</div>
+        </button>
+        <br>
+        <button id="btp4" class="button-play" onclick="thaygt(4)">
+        <div>4</div>
+        </button>
+        <br>
+        <button id="btp5" class="button-play" onclick="thaygt(5)">
+        <div>5</div>
+        </button>
+        <br>
+        <button id="btp6" class="button-play" onclick="thaygt(6)">
+        <div>6</div>
+        </button>
+        <br>
+        <button id="btp7" class="button-play" onclick="thaygt(7)">
+        <div>7</div>
+        </button>
+        <br>
+        <button id="btp8" class="button-play" onclick="thaygt(8)">
+        <div>8</div>
+        </button>
+        <br>
+        <button id="btp9" class="button-play" onclick="thaygt(9)">
+        <div>9</div>
+        </button>
+        <div class="container">
+            <button id="i1" class="item item_1" onclick="clickb(1)"></button>
+            <button id="i2" class="item item_2" onclick="clickb(2)"></button>
+            <button id="i3" class="item item_3" onclick="clickb(3)"></button>
+            <button id="i4" class="item item_1" onclick="clickb(4)"></button>
+            <button id="i5" class="item item_2" onclick="clickb(5)"></button>
+            <button id="i6" class="item item_3" onclick="clickb(6)"></button>
+            <button id="i7" class="item item_1" onclick="clickb(7)"></button>
+            <button id="i8" class="item item_2" onclick="clickb(8)"></button>
+            <button id="i9" class="item item_3" onclick="clickb(9)"></button>
+            <button id="i10" class="item item_4" onclick="clickb(10)"></button>
+            <button id="i11" class="item item_5" onclick="clickb(11)"></button>
+            <button id="i12" class="item item_6" onclick="clickb(12)"></button>
+            <button id="i13" class="item item_4" onclick="clickb(13)"></button>
+            <button id="i14" class="item item_5" onclick="clickb(14)"></button>
+            <button id="i15" class="item item_6" onclick="clickb(15)"></button>
+            <button id="i16" class="item item_4" onclick="clickb(16)"></button>
+            <button id="i17" class="item item_5" onclick="clickb(17)"></button>
+            <button id="i18" class="item item_6" onclick="clickb(18)"></button>
+            <button id="i19" class="item item_7" onclick="clickb(19)"></button>
+            <button id="i20" class="item item_8" onclick="clickb(20)"></button>
+            <button id="i21" class="item item_9" onclick="clickb(21)"></button>
+            <button id="i22" class="item item_7" onclick="clickb(22)"></button>
+            <button id="i23" class="item item_8" onclick="clickb(23)"></button>
+            <button id="i24" class="item item_9" onclick="clickb(24)"></button>
+            <button id="i25" class="item item_7" onclick="clickb(25)"></button>
+            <button id="i26" class="item item_8" onclick="clickb(26)"></button>
+            <button id="i27" class="item item_9" onclick="clickb(27)"></button>
+            <button id="i28" class="item item_1" onclick="clickb(28)"></button>
+            <button id="i29" class="item item_2" onclick="clickb(29)"></button>
+            <button id="i30" class="item item_3" onclick="clickb(30)"></button>
+            <button id="i31" class="item item_1" onclick="clickb(31)"></button>
+            <button id="i32" class="item item_2" onclick="clickb(32)"></button>
+            <button id="i33" class="item item_3" onclick="clickb(33)"></button>
+            <button id="i34" class="item item_1" onclick="clickb(34)"></button>
+            <button id="i35" class="item item_2" onclick="clickb(35)"></button>
+            <button id="i36" class="item item_3" onclick="clickb(36)"></button>
+            <button id="i37" class="item item_4" onclick="clickb(37)"></button>
+            <button id="i38" class="item item_5" onclick="clickb(38)"></button>
+            <button id="i39" class="item item_6" onclick="clickb(39)"></button>
+            <button id="i40" class="item item_4" onclick="clickb(40)"></button>
+            <button id="i41" class="item item_5" onclick="clickb(41)"></button>
+            <button id="i42" class="item item_6" onclick="clickb(42)"></button>
+            <button id="i43" class="item item_4" onclick="clickb(43)"></button>
+            <button id="i44" class="item item_5" onclick="clickb(44)"></button>
+            <button id="i45" class="item item_6" onclick="clickb(45)"></button>
+            <button id="i46" class="item item_7" onclick="clickb(46)"></button>
+            <button id="i47" class="item item_8" onclick="clickb(47)"></button>
+            <button id="i48" class="item item_9" onclick="clickb(48)"></button>
+            <button id="i49" class="item item_7" onclick="clickb(49)"></button>
+            <button id="i50" class="item item_8" onclick="clickb(50)"></button>
+            <button id="i51" class="item item_9" onclick="clickb(51)"></button>
+            <button id="i52" class="item item_7" onclick="clickb(52)"></button>
+            <button id="i53" class="item item_8" onclick="clickb(53)"></button>
+            <button id="i54" class="item item_9" onclick="clickb(54)"></button>
+            <button id="i55" class="item item_1" onclick="clickb(55)"></button>
+            <button id="i56" class="item item_2" onclick="clickb(56)"></button>
+            <button id="i57" class="item item_3" onclick="clickb(57)"></button>
+            <button id="i58" class="item item_1" onclick="clickb(58)"></button>
+            <button id="i59" class="item item_2" onclick="clickb(59)"></button>
+            <button id="i60" class="item item_3" onclick="clickb(60)"></button>
+            <button id="i61" class="item item_1" onclick="clickb(61)"></button>
+            <button id="i62" class="item item_2" onclick="clickb(62)"></button>
+            <button id="i63" class="item item_3" onclick="clickb(63)"></button>
+            <button id="i64" class="item item_4" onclick="clickb(64)"></button>
+            <button id="i65" class="item item_5" onclick="clickb(65)"></button>
+            <button id="i66" class="item item_6" onclick="clickb(66)"></button>
+            <button id="i67" class="item item_4" onclick="clickb(67)"></button>
+            <button id="i68" class="item item_5" onclick="clickb(68)"></button>
+            <button id="i69" class="item item_6" onclick="clickb(69)"></button>
+            <button id="i70" class="item item_4" onclick="clickb(70)"></button>
+            <button id="i71" class="item item_5" onclick="clickb(71)"></button>
+            <button id="i72" class="item item_6" onclick="clickb(72)"></button>
+            <button id="i73" class="item item_7" onclick="clickb(73)"></button>
+            <button id="i74" class="item item_8" onclick="clickb(74)"></button>
+            <button id="i75" class="item item_9" onclick="clickb(75)"></button>
+            <button id="i76" class="item item_7" onclick="clickb(76)"></button>
+            <button id="i77" class="item item_8" onclick="clickb(77)"></button>
+            <button id="i78" class="item item_9" onclick="clickb(78)"></button>
+            <button id="i79" class="item item_7" onclick="clickb(79)"></button>
+            <button id="i80" class="item item_8" onclick="clickb(80)"></button>
+            <button id="i81" class="item item_9" onclick="clickb(81)"></button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
